@@ -110,7 +110,7 @@ function setup() {
   gameInstructions.addImage(infoImg);
   gameInstructions.scale = 1.3;
 
-  playB = createSprite(1100,650,20,20); 
+  playB = createSprite(windowWidth/2,windowHeight/1.1,20,20); 
   playB.addImage(playImg);
   playB.scale = 0.2;
 }
