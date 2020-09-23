@@ -15,7 +15,7 @@ playImg = loadImage("play.jpg");
 }
 
 function setup() {
-  createCanvas(displayWidth-50, displayHeight-50);
+  createCanvas(windowWidth-50,windowHeight-50);
   attempt = 0;
   chance = 0;
   displayWin = false;
@@ -23,91 +23,90 @@ function setup() {
   colArray = shuffle(colorArray);
   console.log(colArray);
  
-  redB = createSprite(50,200,20,20);
+  redB = createSprite(windowWidth/5,windowHeight/3.8,20,20);
   redB.shapeColor = "red";
   redB.visible = false;
 
-  blueB = createSprite(100,200,20,20);
+  blueB = createSprite(windowWidth/4.3,windowHeight/3.8,20,20);
   blueB.shapeColor = "blue";
   blueB.visible = false;
 
-  purpleB = createSprite(150,200,20,20);
+  purpleB = createSprite(windowWidth/3.8,windowHeight/3.8,20,20);
   purpleB.shapeColor = "purple";
   purpleB.visible = false;
 
-  yellowB = createSprite(50,250,20,20);
+  yellowB = createSprite(windowWidth/5,windowHeight/3.2,20,20);
   yellowB.shapeColor = "yellow";
   yellowB.visible = false;
 
-  orangeB = createSprite(100,250,20,20);
+  orangeB = createSprite(windowWidth/4.3,windowHeight/3.2,20,20);
   orangeB.shapeColor = "orange";
   orangeB.visible = false;
 
-  greenB = createSprite(150,250,20,20);
+  greenB = createSprite(windowWidth/3.8,windowHeight/3.2,20,20);
   greenB.shapeColor = "green";
   greenB.visible = false;
 
-  sqr5 = createSprite(400,200,50,50);
+  sqr5 = createSprite(windowWidth/2.73,windowHeight/3.8,50,50);
   sqr5.visible = false;
-  sqr6 = createSprite(550,200,50,50);
+  sqr6 = createSprite(windowWidth/2.3,windowHeight/3.8,50,50);
   sqr6.visible = false;
-  sqr7 = createSprite(700,200,50,50);
+  sqr7 = createSprite(windowWidth/2,windowHeight/3.8,50,50);
   sqr7.visible = false;
-  sqr8 = createSprite(850,200,50,50);
+  sqr8 = createSprite(windowWidth/1.75,windowHeight/3.8,50,50);
   sqr8.visible = false;
-  sqr9 = createSprite(400,300,50,50);
+  sqr9 = createSprite(windowWidth/2.73,windowHeight/2.6,50,50);
   sqr9.visible = false;
-  sqr10 = createSprite(550,300,50,50);
+  sqr10 = createSprite(windowWidth/2.3,windowHeight/2.6,50,50);
   sqr10.visible = false;
-  sqr11 = createSprite(700,300,50,50);
+  sqr11 = createSprite(windowWidth/2,windowHeight/2.6,50,50);
   sqr11.visible = false;
-  sqr12 = createSprite(850,300,50,50);
+  sqr12 = createSprite(windowWidth/1.75,windowHeight/2.6,50,50);
   sqr12.visible = false;
-  sqr13 = createSprite(400,400,50,50);
-  sqr14 = createSprite(550,400,50,50);
-  sqr15 = createSprite(700,400,50,50);
-  sqr16 = createSprite(850,400,50,50);
+  sqr13 = createSprite(windowWidth/2.73,windowHeight/2,50,50);
+  sqr14 = createSprite(windowWidth/2.3,windowHeight/2,50,50);
+  sqr15 = createSprite(windowWidth/2,windowHeight/2,50,50);
+  sqr16 = createSprite(windowWidth/1.75,windowHeight/2,50,50);
  
-
-  ok1 = createSprite(1000,400,50,50);
+  ok1 = createSprite(windowWidth/1.55,windowHeight/2,50,50);
   ok1.addImage(arrowImg);
   ok1.scale = 0.06;
-  check1 = createSprite(950,400,20,20);
+  check1 = createSprite(windowWidth/1.6,windowHeight/2,20,20);
   check1.visible = false;
-  check2 = createSprite(1000,400,20,20);
+  check2 = createSprite(windowWidth/1.55,windowHeight/2,20,20);
   check2.visible = false;
-  check3= createSprite(1050,400,20,20);
+  check3= createSprite(windowWidth/1.5,windowHeight/2,20,20);
   check3.visible = false;
-  check4 = createSprite(1100,400,20,20);
+  check4 = createSprite(windowWidth/1.45,windowHeight/2,20,20);
   check4.visible = false;
 
-  ok2 = createSprite(1000,300,50,50);
+  ok2 = createSprite(windowWidth/1.55,windowHeight/2.6,50,50);
   ok2.visible = false;
   ok2.addImage(arrowImg);
   ok2.scale = 0.06;
-  check5 = createSprite(950,300,20,20);
+  check5 = createSprite(windowWidth/1.6,windowHeight/2.6,20,20);
   check5.visible = false;
-  check6 = createSprite(1000,300,20,20);
+  check6 = createSprite(windowWidth/1.55,windowHeight/2.6,20,20);
   check6.visible = false;
-  check7= createSprite(1050,300,20,20);
+  check7= createSprite(windowWidth/1.5,windowHeight/2.6,20,20);
   check7.visible = false;
-  check8 = createSprite(1100,300,20,20);
+  check8 = createSprite(windowWidth/1.45,windowHeight/2.6,20,20);
   check8.visible = false;
 
-  ok3 = createSprite(1000,200,50,50);
+  ok3 = createSprite(windowWidth/1.55,windowHeight/3.8,50,50);
   ok3.visible = false;
   ok3.addImage(arrowImg);
   ok3.scale = 0.06;
-  check9 = createSprite(950,200,20,20);
+  check9 = createSprite(windowWidth/1.6,windowHeight/3.8,20,20);
   check9.visible = false;
-  check10 = createSprite(1000,200,20,20);
+  check10 = createSprite(windowWidth/1.55,windowHeight/3.8,20,20);
   check10.visible = false;
-  check11= createSprite(1050,200,20,20);
+  check11= createSprite(windowWidth/1.5,windowHeight/3.8,20,20);
   check11.visible = false;
-  check12 = createSprite(1100,200,20,20);
+  check12 = createSprite(windowWidth/1.45,windowHeight/3.8,20,20);
   check12.visible = false;
 
-  gameInstructions = createSprite(displayWidth/2,displayHeight/2,500,300);
+  gameInstructions = createSprite(windowWidth/2,windowHeight/2,500,300);
   gameInstructions.addImage(infoImg);
   gameInstructions.scale = 1.3;
 
@@ -120,9 +119,9 @@ function draw() {
  background("black"); 
  fill("white");
  textSize(18);
- text("- Right colour and right position",320,505);
- text("- Right colour but wrong position",320,555);
- text("- Wrong colour and wrong position",320,605);
+ text("- Right colour and right position",windowWidth/2.2,windowHeight/1.6);
+ text("- Right colour but wrong position",windowWidth/2.2,windowHeight/1.48);
+ text("- Wrong colour and wrong position",windowWidth/2.2,windowHeight/1.38);
 
  if(mousePressedOver(playB)){
    gameInstructions.visible = false;
@@ -138,27 +137,27 @@ function draw() {
    info3.visible = true;
  }
 
- sqr1 = createSprite(400,100,50,50);
+ sqr1 = createSprite(windowWidth/2.73,windowHeight/6.4,50,50);
  sqr1.shapeColor = colArray[0];
 
- sqr2 = createSprite(550,100,50,50);
+ sqr2 = createSprite(windowWidth/2.3,windowHeight/6.4,50,50);
  sqr2.shapeColor = colArray[1];
 
- sqr3 = createSprite(700,100,50,50);
+ sqr3 = createSprite(windowWidth/2,windowHeight/6.4,50,50);
  sqr3.shapeColor = colArray[2];
  
- sqr4 = createSprite(850,100,50,50);
+ sqr4 = createSprite(windowWidth/1.75,windowHeight/6.4,50,50);
  sqr4.shapeColor = colArray[3];
 
- info1 = createSprite(300,500,20,20);
+ info1 = createSprite(windowWidth/2.3,windowHeight/1.61,20,20);
  info1.shapeColor = "white";
  info1.visible = false;
 
- info2 = createSprite(300,550,20,20);
+ info2 = createSprite(windowWidth/2.3,windowHeight/1.49,20,20);
  info2.shapeColor = "brown";
  info2.visible = false;
 
- info3 = createSprite(300,600,20,20);
+ info3 = createSprite(windowWidth/2.3,windowHeight/1.39,20,20);
  info3.shapeColor = "grey";
  info3.visible = false;
  
@@ -424,22 +423,22 @@ drawSprites();
     }
 
     function youWin(){
-  text("YOU WIN!",950,550);
-  text(attempt+ " Out of total 3 attempts",950,600);
+  text("YOU WIN!",windowWidth/2.2,windowHeight/1.2);
+  text(attempt+ " Out of total 3 attempts",windowWidth/1.6,windowHeight/1.2);
   sqr1.visible = true;
   sqr2.visible = true;
   sqr3.visible = true;
   sqr4.visible = true;
-  text("← CORRECT ANSWER",950,100);
+  text("← CORRECT ANSWER",windowWidth/1.6,windowHeight/6.4);
 }
 
 function youLose(){
-  text("YOU LOSE!",950,550);
+  text("YOU LOSE!",windowWidth/2.2,windowHeight/1.2);
   sqr1.visible = true;
   sqr2.visible = true;
   sqr3.visible = true;
   sqr4.visible = true;
-  text("← CORRECT ANSWER",950,100);
+  text("← CORRECT ANSWER",windowWidth/1.6,windowHeight/6.4);
 }
 
    
