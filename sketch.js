@@ -106,13 +106,15 @@ function setup() {
   check12 = createSprite(windowWidth/1.45,windowHeight/3.8,20,20);
   check12.visible = false;
 
-  gameInstructions = createSprite(windowWidth/2,windowHeight/2,500,300);
+  /*gameInstructions = createSprite(windowWidth/2,windowHeight/2,500,300);
   gameInstructions.addImage(infoImg);
   gameInstructions.scale = 1.3;
+  gameInstructions.visible = false;
 
   playB = createSprite(windowWidth/2,windowHeight/1.1,20,20); 
   playB.addImage(playImg);
   playB.scale = 0.2;
+  playB.visible = false;*/
 }
 
 function draw() {
@@ -123,19 +125,11 @@ function draw() {
  text("- Right colour but wrong position",windowWidth/2.2,windowHeight/1.48);
  text("- Wrong colour and wrong position",windowWidth/2.2,windowHeight/1.38);
 
- if(mousePressedOver(playB)){
-   gameInstructions.visible = false;
-   playB.visible = false;
-   redB.visible = true;
-   blueB.visible = true;
-   greenB.visible = true;
-   purpleB.visible = true;
-   yellowB.visible = true;
-   orangeB.visible = true;
-   info1.visible = true;
-   info2.visible = true;
-   info3.visible = true;
- }
+//if(mousePressedOver(playB)){
+   //gameInstructions.visible = false;
+   //playB.visible = false;
+   
+ //}
 
  sqr1 = createSprite(windowWidth/2.73,windowHeight/6.4,50,50);
  sqr1.shapeColor = colArray[0];
@@ -151,17 +145,27 @@ function draw() {
 
  info1 = createSprite(windowWidth/2.3,windowHeight/1.61,20,20);
  info1.shapeColor = "white";
- info1.visible = false;
+ //info1.visible = false;
 
  info2 = createSprite(windowWidth/2.3,windowHeight/1.49,20,20);
  info2.shapeColor = "brown";
- info2.visible = false;
+ //info2.visible = false;
 
  info3 = createSprite(windowWidth/2.3,windowHeight/1.39,20,20);
  info3.shapeColor = "grey";
- info3.visible = false;
+ //info3.visible = false;
  
  hide();
+
+ redB.visible = true;
+   blueB.visible = true;
+   greenB.visible = true;
+   purpleB.visible = true;
+   yellowB.visible = true;
+   orangeB.visible = true;
+   info1.visible = true;
+   info2.visible = true;
+   info3.visible = true;
 
 
  if(mousePressedOver(sqr5) && chance ===2){
